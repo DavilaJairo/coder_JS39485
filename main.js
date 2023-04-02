@@ -25,7 +25,7 @@ registrarUsuario();
 
 alert("Debes adivinar el numero con la menor cantidad de intentos");
 // Genera un número aleatorio entre 1 y 100
-const numeroAleatorio = Math.floor(Math.random() * 20) + 1;
+const numeroAleatorio = Math.floor(Math.random() * 30) + 1;
 
 // Establece el número de Vidas y el número máximo de Vidas permitidos
 let intentos = 0;
@@ -33,8 +33,8 @@ const Vidas = 3;
 
 // Función para validar la entrada del usuario
 function validarEntrada(numero) {
-    if (isNaN(numero) || numero < 1 || numero > 20) {
-        alert("Ingresa un número entre 1 y 20");
+    if (isNaN(numero) || numero < 1 || numero > 30) {
+        alert("Ingresa un número entre 1 y 30");
     return false;
     }
     return true;
@@ -42,7 +42,7 @@ function validarEntrada(numero) {
 
 while (intentos < Vidas) {
   // Le pedimos al usuario que adivine el número
-    const numeroUsuario = parseInt(prompt("Adivina un número entre 1 y 20"));
+    const numeroUsuario = parseInt(prompt("Adivina un número entre 1 y 30"));
 
   // Verifica si la entrada del usuario es válida
     if (validarEntrada(numeroUsuario)) {
@@ -70,7 +70,7 @@ alert("Quieres Volver A Intentarlo.?\n Presiona F5 Para Reiniciar \n Presiona EN
 //---------------------------------------------3era etapa------------------------------------------
 
 //Encuesta
-alert("Te menti Tienes Que Realizar Una Encuesta jajaja");
+alert("Te menti Tienes Que Realizar Una Encuesta  (-‿^)  ");
 
 function Pregunta(texto, opciones) {
     this.texto = texto;
