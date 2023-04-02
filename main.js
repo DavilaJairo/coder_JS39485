@@ -80,7 +80,7 @@ function Pregunta(texto, opciones) {
 
 // Crear un array  de la encuesta
 let encuesta = [
-    new Pregunta("¿Que eres?", ["humano", "maquina", "alienijena"]),
+    new Pregunta("¿Que eres?", ["humano", "maquina", "alienigena"]),
     new Pregunta("¿Cuál es tu pasatiempo favorito?", ["Leer", "Ver películas", "Jugar videojuegos"]),
     new Pregunta("¿Cuál es tu comida favorita?", ["Pizza", "Hamburguesa", "Sushi"]),
     new Pregunta("¿Cuál es tu color favorito?", ["Rojo", "Azul", "Verde"]),
