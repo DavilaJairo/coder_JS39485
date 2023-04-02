@@ -1,6 +1,8 @@
+//---------------------------------------------1era etapa------------------------------------------
+
 // Recopilamos datos del usuario, para su registro
 function registrarUsuario() {
-    alert("¡Bienvenido/a! Por favor, ingrese sus datos:");
+    alert("¡Bienvenido Por favor, ingrese sus datos:");
 
     const usuario = {};
 
@@ -9,7 +11,7 @@ function registrarUsuario() {
     usuario.edad = parseInt(prompt("Edad:"));
     usuario.email = prompt("Correo electrónico:");
 
-    alert("¡Gracias! Estos son tus datos:\n" +
+    alert("¡Gracias! Estos son tus datos:\n \n \n" +
         "Nombre: " + usuario.nombre + "\n" +
         "Apellido: " + usuario.apellido + "\n" +
         "Edad: " + usuario.edad + "\n" +
@@ -18,6 +20,8 @@ function registrarUsuario() {
 }
 
 registrarUsuario();
+
+//---------------------------------------------2da etapa-------------------------------------------
 
 alert("Debes adivinar el numero con la menor cantidad de intentos");
 // Genera un número aleatorio entre 1 y 100
@@ -57,13 +61,45 @@ while (intentos < Vidas) {
 }
 }
 
-// Si el usuario no adivina el número en el número máximo de intentos permitidos, muestra un mensaje de fracaso.
+// Si el usuario no adivina el número en el número máximo de intentos permitidos, muestra un mensaje de FRACASASTE.
 if (intentos === Vidas) {
-    alert(`Te haz quedado sin vidas -${Vidas} \nEl número era ${numeroAleatorio}     (✖╭╮✖) `);
+    alert(`Te haz quedado sin vidas FRACASASTE -${Vidas} \nEl número era ${numeroAleatorio}     (✖╭╮✖) `);
 }
-alert("Presiona F5 si quieres volver a intentarlo");
+alert("Quieres Volver A Intentarlo.?\n Presiona F5 Para Reiniciar \n Presiona ENTER <-- para salir");
 
+//---------------------------------------------3era etapa------------------------------------------
 
+//Encuesta
+alert("Te menti Tienes Que Realizar Una Encuesta jajaja");
+
+function Pregunta(texto, opciones) {
+    this.texto = texto;
+    this.opciones = opciones;
+    this.respuestaUsuario = null;
+}
+
+// Crear un array  de la encuesta
+let encuesta = [
+    new Pregunta("¿Que eres?", ["humano", "maquina", "alienijena"]),
+    new Pregunta("¿Cuál es tu pasatiempo favorito?", ["Leer", "Ver películas", "Jugar videojuegos"]),
+    new Pregunta("¿Cuál es tu comida favorita?", ["Pizza", "Hamburguesa", "Sushi"]),
+    new Pregunta("¿Cuál es tu color favorito?", ["Rojo", "Azul", "Verde"]),
+    new Pregunta("¿Te gusto el juego?", ["Si", "Obvio", "Buenisimo"]),
+];
+
+// Hacer la encuesta y almacenar las respuestas del usuario en el objeto de la pregunta correspondiente
+encuesta.forEach(function(pregunta) {
+    let respuesta = prompt(pregunta.texto + " (" + pregunta.opciones.join(", ") + ")");
+    pregunta.respuestaUsuario = respuesta;
+});
+
+// Mostrar las respuestas del usuario en la consola
+/*encuesta.forEach(function(pregunta) {
+alert(pregunta.texto + ": " + pregunta.respuestaUsuario);
+});*/
+
+Pregunta();
+alert("Gracias por jugar con nosotros, vuelve pronto!!!");
 
 
 
