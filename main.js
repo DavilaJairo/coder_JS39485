@@ -94,9 +94,9 @@ encuesta.forEach(function(pregunta) {
 });
 
 // Mostrar las respuestas del usuario en la consola
-/*encuesta.forEach(function(pregunta) {
-alert(pregunta.texto + ": " + pregunta.respuestaUsuario);
-});*/
+encuesta.forEach(function(pregunta) {
+console.log(pregunta.texto + ": " + pregunta.respuestaUsuario);
+});
 
 Pregunta();
 alert("Gracias por jugar con nosotros, vuelve pronto!!!");
